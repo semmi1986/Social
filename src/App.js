@@ -1,10 +1,10 @@
+import React from 'react'
+import Profile from './pages/Profile'
 
-function App() {
+const App = () => {
 	return (
-		<div >
-			Hello
-		</div>
-	);
+		<Profile />
+	)
 }
 
-export default App;
+export default App
