@@ -1,9 +1,11 @@
 import React from 'react'
-import Profile from './pages/Profile'
+import Chat from './pages/Chat'
+// import Profile from './pages/Profile'
 
 const App = () => {
 	return (
-		<Profile />
+		// <Profile />
+		<Chat/>
 	)
 }
 

@@ -54,7 +54,7 @@ const Container = styled.div`
 	flex: 2;
 	height: calc(100vh - 50px);
 	overflow-y: scroll;
-	::--webkit-scrollbar {
+	:--webkit-scrollbar {
 		width: 5px;
 	}
 	:--webkit-scrollbar-track {

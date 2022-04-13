@@ -8,7 +8,6 @@ const Post = ({ post }) => {
 	const [like, setLike] = useState(post[10].like);
 	const [isLiked, setisLiked] = useState(false);
 
-
 	const handelClick = () =>{
 		setLike(isLiked ? like + 1 : like - 1);
 		setisLiked(!isLiked)
