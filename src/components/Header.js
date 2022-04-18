@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 // import SearchIcon from '@mui/icons-material/Search';
 // import PersonIcon from '@mui/icons-material/Person';
@@ -6,12 +7,14 @@ import styled from 'styled-components';
 // import Badge from '@mui/material/Badge';
 
 const Header = () => {
-  return (
-	<Container>
-			<Logo>
-				<ImageLogo src={"/assets/logo.png"} alt='logo'/>
-				<TitleLogo>Social</TitleLogo>
-			</Logo>
+	return (
+		<Container>
+			<NavLink to='/' style={{textDecoration: "none"}}>
+				<Logo>
+					<ImageLogo src={"/assets/logo.png"} alt='logo' />
+					<TitleLogo>Social</TitleLogo>
+				</Logo>
+			</NavLink>
 			{/* <Search>
 				<SearchIcon style={{ fontSize: 20, marginLeft: 15 }} />
 				<Input placeholder='Search for friends, post or video' />

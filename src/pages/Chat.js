@@ -1,38 +1,39 @@
 import Header from '../components/Header';
 import styled from 'styled-components';
-import Conversation from '../components/Conversation';
+// import Conversation from '../components/Conversation';
 import Message from '../components/Message';
 import ChatOnlineFriends from '../components/ChatOnlineFriends';
-import {Users} from '../prevData'
+import SideBar from '../components/SideBar';
 
 
-const Chat = () => {
+const Chat = ({users}) => {
 	return (
 		<>
 			<Header />
 			<Container>
-				<ChatMenu>
+			<SideBar/>
+				{/* <ChatMenu>
 					<ChatMenuWrapper>
-						<ChatMenuInput placeholder='Serch Friends'/>
-							{Users.map((item) => (
-								item.username === "Homer Simpson"? null :
-								<Conversation key={item.id} user={item}/>
-							))}
+						<ChatMenuInput placeholder='Serch Friends' />
+						{Users.map((item) => (
+							item.username === "Homer Simpson" ? null :
+								<Conversation key={item.id} user={item} />
+						))}
 					</ChatMenuWrapper>
-				</ChatMenu>
+				</ChatMenu> */}
 				<ChatBox>
 					<ChatBoxWrapper>
 						<ChatBoxTop>
-							<Message/>
-							<Message own={true}/>
-							<Message/>
-							<Message/>
-							<Message/>
-							<Message/>
-							<Message/>
-							<Message/>
-							<Message own={true}/>
-							
+							<Message />
+							<Message own={true} />
+							<Message />
+							<Message />
+							<Message />
+							<Message />
+							<Message />
+							<Message />
+							<Message own={true} />
+
 						</ChatBoxTop>
 						<ChatBoxBottom>
 							<MessageField placeholder='write message...'></MessageField>
@@ -42,7 +43,8 @@ const Chat = () => {
 				</ChatBox>
 				<ChatOnline>
 					<ChatOnlineWrapper>
-						<ChatOnlineFriends users={Users}/>
+						<ChatOnlineTetxt>Friends online</ChatOnlineTetxt>
+						<ChatOnlineFriends users={users} />
 					</ChatOnlineWrapper>
 				</ChatOnline>
 			</Container>
@@ -55,26 +57,26 @@ const Container = styled.div`
 	display: flex;
 `
 // ----------------------------------ChatMenu-------------------
-const ChatMenu = styled.div`
-	flex: 2;
-	height: calc(100vh - 50px);
-	overflow-y: scroll;
-`
+// const ChatMenu = styled.div`
+// 	flex: 2;
+// 	height: calc(100vh - 50px);
+// 	overflow-y: scroll;
+// `
 const ChatMenuWrapper = styled.div`
 	padding: 10px;
 	height: 100%;
 `
 
-const ChatMenuInput = styled.input`
-	width: 90%;
-	padding: 10px 0;
-	border: none;
-	border-bottom: 1px solid grey;
-	:focus{
-		outline: none;
-	}
+// const ChatMenuInput = styled.input`
+// 	width: 90%;
+// 	padding: 10px 0;
+// 	border: none;
+// 	border-bottom: 1px solid grey;
+// 	:focus{
+// 		outline: none;
+// 	}
 
-`
+// `
 
 // ----------------------------------ChatBox-------------------
 const ChatBox = styled.div`
@@ -122,6 +124,11 @@ const ChatOnline = styled.div`
 	flex: 2;
 `
 const ChatOnlineWrapper = styled(ChatMenuWrapper)``
+
+const ChatOnlineTetxt = styled.h2`
+	margin-bottom: 5px;
+	text-decoration: underline ;
+`
 
 
 export default Chat

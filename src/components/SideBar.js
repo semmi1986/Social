@@ -5,6 +5,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import SlowMotionVideoIcon from '@mui/icons-material/SlowMotionVideo';
 import GroupIcon from '@mui/icons-material/Group';
 import FlagSharpIcon from '@mui/icons-material/FlagSharp';
+import { NavLink } from 'react-router-dom';
 // import { Users } from "../dummyData"
 // import FriendsSideBar from './FriendsSideBar';
 
@@ -15,11 +16,15 @@ const SideBar = () => {
 				<List>
 					<ListItem>
 						<PersonIcon />
-						<ListItemText>Profile</ListItemText>
+						<LinkRouter to='/'>
+							<ListItemText>Profile</ListItemText>
+						</LinkRouter>
 					</ListItem>
 					<ListItem>
 						<ChatIcon />
-						<ListItemText>Chat</ListItemText>
+						<LinkRouter to="/chat" >
+							<ListItemText>Chat</ListItemText>
+						</LinkRouter>
 					</ListItem>
 					<ListItem>
 						<SlowMotionVideoIcon />
@@ -31,7 +36,9 @@ const SideBar = () => {
 					</ListItem>
 					<ListItem>
 						<FlagSharpIcon />
-						<ListItemText>Friends</ListItemText>
+						<LinkRouter to='/friends'>
+							<ListItemText>Friends</ListItemText>
+						</LinkRouter>
 					</ListItem>
 				</List>
 
@@ -82,12 +89,26 @@ const ListItem = styled.li`
 	margin-bottom: 20px;
 	cursor: pointer;
 	transition: font-size 0.5s;
+	text-decoration: none;
 
 	:hover{
 		color: rgb(85, 88, 88);
 		font-size: 20px;
 	}
 `;
+
+const LinkRouter = styled(NavLink)`
+	color: black;
+	text-decoration: none;
+	transition: font-size 0.5s;
+	text-decoration: none;
+
+	:hover{
+		color: rgb(85, 88, 88);
+		font-size: 20px;
+	}
+`
+
 const ListItemText = styled.span`
 	margin-left: 10px;
 `;

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import Post from './Post';
 import Share from './Share';
-import { Posts } from '../prevData'
 
-const FeedBar = () => {
+const FeedBar = ({ users, posts }) => {
 
 	return (
+		
 		<Container>
 			<Wrapper>
 				<Share />
-				<Post post={Posts} />
+				<Post posts={posts} users={users} />
 			</Wrapper>
 		</Container>
 	)

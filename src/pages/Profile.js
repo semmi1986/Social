@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import RightBar from '../components/RightBar';
 import SideBar from '../components/SideBar';
 
-const Profile = () => {
+const Profile = ({users, posts}) => {
 	return (
 		<>
 			<Header />
@@ -22,7 +22,7 @@ const Profile = () => {
 						</ProfileInfo>
 					</ProfileRightTop>
 					<ProfileRightBottom>
-						<FeedBar />
+						<FeedBar users={users} posts={posts}/>
 						<RightBar />
 					</ProfileRightBottom>
 				</ProfileRight>

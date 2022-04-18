@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {Users} from '../prevData'
 import { useState } from 'react';
 
-const Post = ({ post }) => {
+const Post = ({ posts, users }) => {
 
-	const [like, setLike] = useState(post[10].like);
+	const [like, setLike] = useState(posts[10].like);
 	const [isLiked, setisLiked] = useState(false);
+
 
 	const handelClick = () =>{
 		setLike(isLiked ? like + 1 : like - 1);
@@ -18,11 +18,11 @@ const Post = ({ post }) => {
 
 				<PostTop>
 					<PostTopLeft>
-						<PostProfileImage src={Users[11].profilePicture} alt='avatar' />
+						<PostProfileImage src={users[11].profilePicture} alt='avatar' />
 						<PostUserName>
-							{Users[11].username}
+							{users[11].username}
 						</PostUserName>
-						<PostDataTime>{post[10].date}</PostDataTime>
+						<PostDataTime>{posts[10].date}</PostDataTime>
 					</PostTopLeft>
 					<PostTopRight>
 						<CustomIconMoreVertical />
@@ -30,8 +30,8 @@ const Post = ({ post }) => {
 				</PostTop>
 
 				<PostCenter>
-					<PostText>{post[10].desc}</PostText>
-					<PostImg src={post[10].photo}/>
+					<PostText>{posts[10].desc}</PostText>
+					<PostImg src={posts[10].photo}/>
 				</PostCenter>
 
 				<PostBottom>
@@ -42,7 +42,7 @@ const Post = ({ post }) => {
 					</PostBottomLeft>
 
 					<PostBottomRight>
-						<PostCommentText> {post[10].comment} comments</PostCommentText>
+						<PostCommentText> {posts[10].comment} comments</PostCommentText>
 					</PostBottomRight>
 				</PostBottom>
 

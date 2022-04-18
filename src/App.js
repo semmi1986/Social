@@ -1,11 +1,21 @@
 import React from 'react'
-import Chat from './pages/Chat'
-// import Profile from './pages/Profile'
+import { Route, Routes } from 'react-router-dom'
+import Chat from './pages/Chat';
+import Friends from './pages/Friends';
+import Profile from './pages/Profile';
+import { Users } from './prevData';
+import { Posts } from './prevData';
 
-const App = () => {
+const App = () => { 
 	return (
-		// <Profile />
-		<Chat/>
+		<>
+			<Routes>
+				<Route path='/' element={<Profile users={Users} posts={Posts}/>} />
+				<Route path='chat' element={<Chat users={Users}/>} />
+				<Route path='friends' element={<Friends users={Users}/>} />
+			</Routes>
+			
+		</>
 	)
 }
 

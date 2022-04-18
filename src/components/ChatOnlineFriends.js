@@ -7,9 +7,9 @@ const ChatOnlineFriends = ({ users }) => {
 		<Container>
 			{users.map((item) => (
 				item.id === 12 ? null :
-				<Wrapper>
+				<Wrapper key={item.id}>
 					<FriendsInner>
-						<BadgeAvatar avatar={item.profilePicture}/>
+						<BadgeAvatar  avatar={item.profilePicture}/>
 					</FriendsInner>
 					<FriendItemName>{item.username}</FriendItemName>
 				</Wrapper>
@@ -20,8 +20,9 @@ const ChatOnlineFriends = ({ users }) => {
 }
 
 const Container = styled.div`
-height: calc(100vh - 50px);
+	height: calc(100vh - 50px);
 	overflow-y: scroll;
+	margin-left: 10px;
 	
 `
 const Wrapper = styled.div`
