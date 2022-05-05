@@ -26,7 +26,6 @@ const FriendMenu = () => {
 		onUsersRequest(page, true)
 	}, [])
 
-	console.log(page);
 
 
 	return (
