@@ -5,12 +5,15 @@ import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 
 const Share = () => {
-  return (
-<Container>
+
+
+
+	return (
+		<Container>
 			<Wrapper>
 				<ShareTop>
 					<ShareProfileImage src={'/assets/Homer.png'} />
-					<ShareInput placeholder='What`s in your mind?' />
+					<ShareInput placeholder='What`s in your mind?'/>
 				</ShareTop>
 				<hr style={{ margin: "20px" }} />
 				<ShareButtom>
@@ -37,7 +40,7 @@ const Share = () => {
 						</ShareOption>
 
 					</ShareOptions>
-					<ShareButton>Add</ShareButton>
+					<ShareButton >Add</ShareButton>
 				</ShareButtom>
 			</Wrapper>
 		</Container>

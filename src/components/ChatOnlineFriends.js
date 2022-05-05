@@ -1,18 +1,24 @@
 
+
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import BadgeAvatar from './BadgeAvatar';
 
-const ChatOnlineFriends = ({ users }) => {
+const ChatOnlineFriends = () => {
+
+	const users = useSelector(state => state.users.users)
+
+
 	return (
 		<Container>
 			{users.map((item) => (
 				item.id === 12 ? null :
-				<Wrapper key={item.id}>
-					<FriendsInner>
-						<BadgeAvatar  avatar={item.profilePicture}/>
-					</FriendsInner>
-					<FriendItemName>{item.username}</FriendItemName>
-				</Wrapper>
+					<Wrapper key={item.id}>
+						<FriendsInner>
+							<BadgeAvatar avatar={item.profilePicture} />
+						</FriendsInner>
+						<FriendItemName>{item.name}</FriendItemName>
+					</Wrapper>
 			))}
 
 		</Container>

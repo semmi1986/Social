@@ -6,7 +6,7 @@ import ChatOnlineFriends from '../components/ChatOnlineFriends';
 import SideBar from '../components/SideBar';
 
 
-const Chat = ({users}) => {
+const Chat = () => {
 	return (
 		<>
 			<Header />
@@ -44,7 +44,7 @@ const Chat = ({users}) => {
 				<ChatOnline>
 					<ChatOnlineWrapper>
 						<ChatOnlineTetxt>Friends online</ChatOnlineTetxt>
-						<ChatOnlineFriends users={users} />
+						<ChatOnlineFriends />
 					</ChatOnlineWrapper>
 				</ChatOnline>
 			</Container>

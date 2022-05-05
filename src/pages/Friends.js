@@ -5,19 +5,19 @@ import SideBar from '../components/SideBar';
 import FriendMenu from '../components/FriendMenu';
 import ChatOnlineFriends from '../components/ChatOnlineFriends';
 
-const Friends = ({users}) => {
+const Friends = () => {
   return (
 	<>
 		<Header/>
 		<Container>
 			<SideBar/>
 			<FriendsBox>
-				<FriendMenu users={users}/>
+				<FriendMenu />
 			</FriendsBox>
 			<FriendsOnline>
 					<FriendsOnlineWrapper>
 						<FriendsOnlineTetxt>Friends online</FriendsOnlineTetxt>
-						<ChatOnlineFriends users={users} />
+						<ChatOnlineFriends />
 					</FriendsOnlineWrapper>
 				</FriendsOnline>
 		</Container>

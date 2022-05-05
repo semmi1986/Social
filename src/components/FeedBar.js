@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import Post from './Post';
 import Share from './Share';
 
-const FeedBar = ({ users, posts }) => {
+const FeedBar = () => {
 
 	return (
 		
 		<Container>
 			<Wrapper>
-				<Share />
-				<Post posts={posts} users={users} />
+				<Share/>
+				<Post />
 			</Wrapper>
 		</Container>
 	)

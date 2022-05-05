@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-const Post = ({ posts, users }) => {
+const Post = () => {
+
+	const  users = useSelector(state => state.users.users)
+	const  posts = useSelector(state => state.posts.posts)
 
 	const [like, setLike] = useState(posts[10].like);
 	const [isLiked, setisLiked] = useState(false);
@@ -22,7 +26,7 @@ const Post = ({ posts, users }) => {
 						<PostUserName>
 							{users[11].username}
 						</PostUserName>
-						<PostDataTime>{posts[10].date}</PostDataTime>
+						<PostDataTime>{posts[10].data}</PostDataTime>
 					</PostTopLeft>
 					<PostTopRight>
 						<CustomIconMoreVertical />

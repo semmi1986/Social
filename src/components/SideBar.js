@@ -6,8 +6,6 @@ import SlowMotionVideoIcon from '@mui/icons-material/SlowMotionVideo';
 import GroupIcon from '@mui/icons-material/Group';
 import FlagSharpIcon from '@mui/icons-material/FlagSharp';
 import { NavLink } from 'react-router-dom';
-// import { Users } from "../dummyData"
-// import FriendsSideBar from './FriendsSideBar';
 
 const SideBar = () => {
 	return (
@@ -37,7 +35,7 @@ const SideBar = () => {
 					<ListItem>
 						<FlagSharpIcon />
 						<LinkRouter to='/friends'>
-							<ListItemText>Friends</ListItemText>
+							<ListItemText>Сommunity</ListItemText>
 						</LinkRouter>
 					</ListItem>
 				</List>
